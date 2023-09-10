@@ -1,13 +1,10 @@
 name: Sync channels
 
 on: 
-  schedule:
-    - cron: "15 14 * * *" # daily
   workflow_dispatch: # on button click
 jobs:
   sync:
-    runs-on: [nix]
-
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
